@@ -145,6 +145,13 @@
             background-color: var(--accent);
         }
 
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
         .card {
             background: var(--card-bg);
             border-radius: 8px;
@@ -162,8 +169,8 @@
 
         .card h3 {
             color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 0.2rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
         }
 
         .company-heading {
@@ -176,12 +183,6 @@
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
-        }
-
-        .role-company {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 1.05rem;
         }
 
         .role-dates {
@@ -312,6 +313,7 @@
             <div class="logo">ANIL GHUGE</div>
             <nav class="nav-links">
                 <a href="#about">About</a>
+                <a href="#competencies">Competencies</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Case Studies</a>
                 <a href="#certifications">Certifications</a>
@@ -338,6 +340,37 @@
                 <a href="tel:+919975945045" class="pill">📞 +91 9975945045</a>
                 <a href="https://linkedin.com/in/anil-ghuge-a6839b110" target="_blank" class="pill">🌐 LinkedIn Profile</a>
                 <span class="pill">📍 Pune, India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE COMPETENCIES (ACROSS ALL ROLES) -->
+    <section class="section" id="competencies">
+        <h2 class="section-title">Core Competencies Across All Roles</h2>
+        <div class="grid-3">
+            <div class="card" style="margin-bottom:0;">
+                <h3>💾 Enterprise Backup & Data Protection</h3>
+                <p>NetBackup Administration (v7.1 to v10.x), NetBackup Appliances (5220, 5230, 5240, 5330), Cohesity Data Protection Solutions, Symantec DLO, OpsCenter, Aptare Reporting, Storage Lifecycle Policies (SLP), Tape Libraries & VTLs (IBM, NetApp, EMC Data Domain).</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>⚙️ L3 Systems Support & Infrastructure</h3>
+                <p>High-Severity Incident Escalation, Capacity Planning, Hardware Firmware Upgrades, Resource Performance Tuning, Database Backup Recovery (Oracle, SQL, Exchange, SAP HANA, Unix, VMware, Linux), Migration Engineering & Lifecycle Refresh.</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>🏗️ Virtual Cloud Lab Architecture</h3>
+                <p>Skillable Cloud Labs, Scenario-Based Hands-On Lab Development, Automated Scoring Scripts, Webhooks, Custom Containers, Lifecycle Actions, Cloud Slice for AWS & Azure environments.</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>🎓 Technical Education & Enablement</h3>
+                <p>Instructor-Led Training (ILT), Virtual ILT (VILT), Self-Paced E-Learning Design, Customer & Internal Team Onboarding, Facilitator Guides, Knowledge Management Systems, Assessment Development & Courseware Evaluation.</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>🎬 Multimedia & Content Authoring</h3>
+                <p>Articulate 360 (Storyline & Rise), Camtasia Video Production, Vyond Animation, Demoboost Interactive Demos, Synthesia AI Video, Microsoft Speech Studio, Closed Captioning & Accessibility (WCAG).</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>🤖 AI & Team Leadership</h3>
+                <p>Generative AI Workflows (Claude Code, Copilot, ChatGPT), Team Leadership & Mentorship, Shift Rostering, Process Management (Incident, Change, Problem Management), SLA & Audit Documentation.</p>
             </div>
         </div>
     </section>
