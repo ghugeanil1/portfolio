@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anil Ghuge | Instructional Designer & Learning Technology Specialist</title>
+    <style>
+        :root {
+            --primary: #003366;
+            --primary-light: #004d99;
+            --secondary: #46505f;
+            --accent: #00a8e8;
+            --bg-light: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-dark: #333333;
+            --text-muted: #555555;
+            --border: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h2 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .contact-pills {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: white;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+            transition: background 0.3s;
+        }
+
+        .pill:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .role-company {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .role-dates {
+            font-size: 0.88rem;
+            color: var(--secondary);
+            font-style: italic;
+            margin-bottom: 0.8rem;
+        }
+
+        .keyword-box {
+            background: #f1f5f9;
+            border-left: 4px solid var(--accent);
+            padding: 0.6rem 0.8rem;
+            margin: 0.8rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .keyword-box h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-container {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #e2e8f0;
+            color: #334155;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        ul.bullet-list {
+            padding-left: 1.2rem;
+            margin-top: 0.8rem;
+        }
+
+        ul.bullet-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .case-study {
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .cs-header {
+            background: #f1f5f9;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cs-header h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        .cs-header .meta {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-top: 0.3rem;
+        }
+
+        .cs-body {
+            padding: 1.5rem;
+        }
+
+        details {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 0.8rem;
+            padding: 0.8rem 1.2rem;
+        }
+
+        summary {
+            font-weight: bold;
+            color: var(--primary);
+            cursor: pointer;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .tree-list {
+            margin-top: 0.8rem;
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .tree-list li {
+            margin-bottom: 0.4rem;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">ANIL GHUGE</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#competencies">Competencies</a>
+                <a href="#experience">Career Progression</a>
+                <a href="#projects">Case Studies</a>
+                <a href="#certifications">Certifications</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>Anil Ghuge</h1>
+            <h2>Education Specialist III | Senior Technical Education Consultant | Senior Engineer L3 | Technical Support Engineer | Team Lead & Project Engineer</h2>
+            <p>12+ years of continuous enterprise technology experience—spanning hands-on cloud backup engineering, L3 escalations, global education consulting, and AI-driven Instructional Design.</p>
+            <div class="contact-pills">
+                <a href="mailto:ghugeanil1@gmail.com" class="pill">✉️ ghugeanil1@gmail.com</a>
+                <a href="tel:+919975945045" class="pill">📞 +91 9975945045</a>
+                <a href="https://linkedin.com/in/anil-ghuge-a6839b110" target="_blank" class="pill">🌐 LinkedIn Profile</a>
+                <span class="pill">📍 Pune, India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE COMPETENCIES -->
+    <section class="section" id="competencies">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="grid-4">
+            <div class="card" style="margin-bottom:0;">
+                <h3>Instructional Design & Pedagogy</h3>
+                <p>ADDIE/SAM Frameworks, Learner-Centered Pedagogy, Online & Blended Course Design, Learning Objectives Alignment, Assessment Development & Accessibility Standards.</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>SME & Faculty Collaboration</h3>
+                <p>Technical Course Consultation, Facilitator Guides, Upskilling Workshops, Peer Review Coaching & Cross-Functional Alignment.</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>Multimedia Authoring</h3>
+                <p>Articulate 360 (Storyline & Rise), Camtasia, Vyond, Demoboost, Synthesia AI Video & Microsoft Speech Studio.</p>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>EdTech & AI Integration</h3>
+                <p>Learning Management Systems (LMS), Virtualized Cloud Labs (Skillable), Generative AI Integration (Claude Code, Copilot, Google GenAI).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL CHRONOLOGICAL PROFESSIONAL EXPERIENCE -->
+    <section class="section" id="experience">
+        <h2 class="section-title">Professional Experience (Role by Role)</h2>
+
+        <!-- Role 1 -->
+        <div class="card">
+            <h3>Education Specialist III</h3>
+            <div class="role-company">Cohesity</div>
+            <div class="role-dates">Oct 2025 – Present | Pune, India</div>
+            
+            <div class="keyword-box">
+                <h4>Mapped ID & Enablement Keywords:</h4>
+                <div class="tag-container">
+                    <span class="tag">ADDIE & SAM</span>
+                    <span class="tag">Articulate 360</span>
+                    <span class="tag">Generative AI Workflows (Claude Code / Copilot)</span>
+                    <span class="tag">Microlearning</span>
+                    <span class="tag">SME Collaboration</span>
+                </div>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Partner directly with Principal Software Engineers and Product Leaders to design, refine, and publish fully online technical courses and blended learning paths for enterprise data protection.</li>
+                <li>Author interactive eLearning modules, video tutorials, and digital guides using Articulate 360, Camtasia, Vyond, and Synthesia AI.</li>
+                <li>Host upskilling workshops and new instructor orientations to train facilitators on best practices for online course delivery and learning tools.</li>
+                <li>Integrate generative AI tools (Claude, Copilot) into instructional design workflows to accelerate content development and optimize learner accessibility.</li>
+            </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="card">
+            <h3>Education Specialist II</h3>
+            <div class="role-company">Cohesity</div>
+            <div class="role-dates">Dec 2024 – Sep 2025 | Pune, India</div>
+
+            <div class="keyword-box">
+                <h4>Mapped ID & Enablement Keywords:</h4>
+                <div class="tag-container">
+                    <span class="tag">Virtual Lab Architecture</span>
+                    <span class="tag">Skillable Cloud Labs</span>
+                    <span class="tag">Continuous Improvement</span>
+                    <span class="tag">Courseware Evaluation</span>
+                </div>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Designed and delivered interactive self-paced online courses and scenario-based virtual lab environments on Skillable.</li>
+                <li>Evaluated learner feedback metrics and telemetry data to continuously update courseware and align learning materials with instructional goals.</li>
+            </ul>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="card">
+            <h3>Senior Technical Education Consultant</h3>
+            <div class="role-company">Veritas Technologies LLC</div>
+            <div class="role-dates">Nov 2020 – Dec 2024 | Pune, India</div>
+
+            <div class="keyword-box">
+                <h4>Mapped ID & Enablement Keywords:</h4>
+                <div class="tag-container">
+                    <span class="tag">100+ Published Skillable Labs</span>
+                    <span class="tag">Distance Learning Strategy</span>
+                    <span class="tag">Facilitator Guides</span>
+                    <span class="tag">Automated Scoring Scripts</span>
+                </div>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Managed the design, authoring, and global execution of technical education programs and distance learning solutions covering NetBackup 10.x and appliance architectures.</li>
+                <li>Earned official Skillable Recognition for publishing over 100+ production-grade virtual lab modules with advanced automated scoring scripts, webhooks, and lifecycle actions.</li>
+                <li>Developed multimedia modules, facilitator guides, student lab manuals, and interactive simulations using Articulate 360 and video authoring tools.</li>
+            </ul>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="card">
+            <h3>Senior Engineer – L3 Support & Technical Enablement</h3>
+            <div class="role-company">SunGard Availability Services</div>
+            <div class="role-dates">Apr 2018 – Oct 2020 | Pune, India</div>
+
+            <div class="keyword-box">
+                <h4>Mapped ID & Enablement Keywords:</h4>
+                <div class="tag-container">
+                    <span class="tag">Technical Onboarding</span>
+                    <span class="tag">Standard Operating Procedures (SOPs)</span>
+                    <span class="tag">Performance Support Tools (PSTs)</span>
+                    <span class="tag">Job Aids & Playbooks</span>
+                </div>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Handled complex L3 infrastructure escalations and root-cause analysis (RCA) across multi-tenant enterprise cloud storage footprints exceeding 10+ Petabytes.</li>
+                <li>Authored technical playbooks, standard operating procedures (SOPs), and instructional runbooks to onboard and mentor Tier 1 and Tier 2 support engineers.</li>
+                <li>Delivered technical training sessions and root-cause analysis briefings for cross-functional stakeholders.</li>
+            </ul>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="card">
+            <h3>Technical Support Engineer</h3>
+            <div class="role-company">Veritas Technologies LLC</div>
+            <div class="role-dates">Feb 2017 – Mar 2018 | Pune, India</div>
+
+            <div class="keyword-box">
+                <h4>Mapped ID & Enablement Keywords:</h4>
+                <div class="tag-container">
+                    <span class="tag">Knowledge Base (KB) Development</span>
+                    <span class="tag">Technical Documentation</span>
+                    <span class="tag">Customer Enablement</span>
+                </div>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Delivered specialized L2/L3 technical support and training for key enterprise NetBackup accounts.</li>
+                <li>Ensured standardized operational documentation and authored customer-facing Knowledge Base (KB) articles and resolution playbooks.</li>
+            </ul>
+        </div>
+
+        <!-- Role 6 -->
+        <div class="card">
+            <h3>Associate Consultant</h3>
+            <div class="role-company">Atos</div>
+            <div class="role-dates">Feb 2016 – Feb 2017 | Pune, India</div>
+
+            <div class="keyword-box">
+                <h4>Mapped ID & Enablement Keywords:</h4>
+                <div class="tag-container">
+                    <span class="tag">Onboarding Guides</span>
+                    <span class="tag">Training Material Creation</span>
+                    <span class="tag">Compliance Tracking</span>
+                </div>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Created training materials and onboarding guides for offshore technical teams.</li>
+                <li>Monitored operational compliance metrics and managed enterprise backup infrastructure routines.</li>
+            </ul>
+        </div>
+
+        <!-- Role 7 -->
+        <div class="card">
+            <h3>Team Lead & Project Engineer</h3>
+            <div class="role-company">Wipro</div>
+            <div class="role-dates">Jun 2012 – Jan 2016 | Pune, India</div>
+
+            <div class="keyword-box">
+                <h4>Mapped ID & Enablement Keywords:</h4>
+                <div class="tag-container">
+                    <span class="tag">Team Enablement</span>
+                    <span class="tag">Progress Reviews</span>
+                    <span class="tag">SME Foundation</span>
+                </div>
+            </div>
+
+            <ul class="bullet-list">
+                <li>Led team enablement programs, conducted weekly progress reviews, and authored technical status reports.</li>
+                <li>Built the core hands-on engineering foundation in enterprise IT, storage, and backup systems that powers technical instructional design today.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FEATURED CASE STUDIES -->
+    <section class="section" id="projects">
+        <h2 class="section-title">Featured Case Studies</h2>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <h3>Technical Microlearning & AI-Enhanced Production Workflow</h3>
+                <div class="meta">Role: Technical Instructional Designer | Focus: SaaS Software Enablement & TechSmith Camtasia</div>
+            </div>
+            <div class="cs-body">
+                <p><strong>Challenge:</strong> Reduce learner cognitive load when mastering complex software user interfaces and accelerate course production timelines without compromising technical accuracy.</p>
+                <p style="margin-top: 0.5rem;"><strong>Solution:</strong> Designed and produced a bite-sized 5-minute technical microlearning module using Camtasia. Integrated AI tools (Claude & Speech Studio) to draft scripts, create clear closed captions, and generate natural AI audio narration, reducing post-production edit time significantly.</p>
+                <div class="tag-container" style="margin-top:1rem;">
+                    <span class="tag">TechSmith Camtasia</span>
+                    <span class="tag">Generative AI (Claude)</span>
+                    <span class="tag">Microlearning</span>
+                    <span class="tag">Accessibility (WCAG)</span>
+                    <span class="tag">Synthesia</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <h3>Enterprise Hands-On Virtualized Cloud Lab Architecture</h3>
+                <div class="meta">Role: Lead Technical Education Specialist | Platform: Skillable Cloud Labs</div>
+            </div>
+            <div class="cs-body">
+                <p><strong>Challenge:</strong> Deliver realistic, hands-on software technical validation for thousands of global learners across complex enterprise storage and backup architectures.</p>
+                <p style="margin-top: 0.5rem;"><strong>Solution:</strong> Architected and published over 100+ virtual lab environments on Skillable, incorporating automated scoring scripts, life-cycle actions, and custom cloud containers to test practical learner competencies in real-time.</p>
+                <div class="tag-container" style="margin-top:1rem;">
+                    <span class="tag">Skillable Labs</span>
+                    <span class="tag">Cloud Infrastructure</span>
+                    <span class="tag">Performance Validation</span>
+                    <span class="tag">Automated Scoring</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LICENSES & CERTIFICATIONS CATALOG -->
+    <section class="section" id="certifications">
+        <h2 class="section-title">Licenses & Certifications Catalog</h2>
+
+        <details open>
+            <summary>🎓 Instructional Design & eLearning Authoring</summary>
+            <ul class="tree-list">
+                <li><strong>The complete Instructional Designer course</strong> — Udemy / John Hinchliffe (Feb 2026)</li>
+                <li><strong>Create eLearning Courses with Articulate Storyline 360</strong> — Udemy / Jeff Batt (Feb 2026)</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>🤖 Artificial Intelligence & Emerging Tech</summary>
+            <ul class="tree-list">
+                <li><strong>Claude Code in Action</strong> — Anthropic (May 2026 | ID: xqwm3oouzwvi)</li>
+                <li><strong>Amplify with AI</strong> — Cohesity (Mar 2026)</li>
+                <li><strong>Artificial Intelligence General Awareness</strong> — Veritas Technologies (May 2024)</li>
+                <li><strong>Introduction to Responsible AI / LLMs / GenAI</strong> — Google (Apr 2024)</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>🌳 Skillable & Learn on Demand Systems (28 Badges / 100+ Published Labs Tree)</summary>
+            <ul class="tree-list">
+                <li><strong>Milestone Recognitions:</strong> 100 Labs Published, 75 Labs Published, 50 Labs Published, 25 Labs Published, 10 Labs Published, Skillable Announcement Recognition.</li>
+                <li><strong>Specialized Developer Workshops:</strong> Collaborative Labs, Scoring Skillable Labs, Lab Activities & Outcomes, Custom Containers, Advanced Markdown, Custom Cloud Configurations, Skillable Script Library, Advanced Networking & Virtualization, Cloud Slice for AWS & Azure.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>💾 Data Protection & Enterprise Storage</summary>
+            <ul class="tree-list">
+                <li><strong>Mastering the Five Steps to Cyber Resiliency</strong> — Cohesity (Jan 2026)</li>
+                <li><strong>Data Protection & Platform Fast Track</strong> — Cohesity (2025)</li>
+                <li><strong>VCS Veritas NetBackup 10.x & Appliance Administrator</strong> — Veritas (Dec 2022)</li>
+            </ul>
+        </details>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Anil Ghuge | Technical Instructional Design & Learning Technology Enablement</p>
+    </footer>
+
+</body>
+</html>
