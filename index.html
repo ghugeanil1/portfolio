@@ -3,670 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anil Ghuge | Enterprise Technology & Enablement Specialist</title>
+    <title>Anil Ghuge - Enterprise Technology & Enablement Specialist</title>
     <style>
         :root {
             --primary: #003366;
-            --primary-light: #004d99;
-            --secondary: #46505f;
-            --accent: #00a8e8;
-            --bg-light: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-dark: #333333;
+            --secondary: #4682B4;
+            --text-dark: #222222;
             --text-muted: #555555;
-            --border: #e0e0e0;
+            --bg-light: #f8f9fa;
+            --border-color: #e2e8f0;
         }
-
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
-
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1.5rem;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: white;
-            padding: 4rem 1.5rem;
-            text-align: center;
-        }
-
-        .hero-content {
+        .container {
             max-width: 900px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-
-        .hero h2 {
-            font-size: 1.15rem;
-            color: var(--accent);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
+        h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-
-        .hero p {
+        .titles {
+            color: var(--secondary);
             font-size: 1.05rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
-
-        .contact-pills {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
+        .contact-info {
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
-
-        .pill {
-            background: rgba(255,255,255,0.15);
-            padding: 0.5rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: white;
+        .contact-info a {
+            color: var(--secondary);
             text-decoration: none;
-            backdrop-filter: blur(5px);
-            transition: background 0.3s;
         }
-
-        .pill:hover {
-            background: var(--accent);
-            color: #000;
+        .contact-info a:hover {
+            text-decoration: underline;
         }
-
-        .section {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
+        section {
+            margin-bottom: 35px;
         }
-
-        .section-title {
-            font-size: 1.8rem;
+        h2 {
             color: var(--primary);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent);
-        }
-
-        .grid-3 {
+        .competency-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 15px;
         }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.8rem;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-bottom: 1.8rem;
+        .competency-item {
+            background: var(--bg-light);
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 3px solid var(--secondary);
         }
-
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.06);
-        }
-
-        .card h3 {
+        .competency-item strong {
+            display: block;
             color: var(--primary);
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 4px;
         }
-
-        .company-heading {
-            font-size: 1.4rem;
-            color: var(--primary);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.2rem;
+        .job-card {
+            margin-bottom: 24px;
+        }
+        .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            flex-wrap: wrap;
+            margin-bottom: 4px;
         }
-
-        .role-dates {
-            font-size: 0.9rem;
-            color: var(--secondary);
-            font-style: italic;
-            margin-bottom: 0.8rem;
-        }
-
-        .skills-tag-box {
-            margin-top: 1rem;
-            padding-top: 0.8rem;
-            border-top: 1px dashed var(--border);
-            font-size: 0.88rem;
-            color: var(--secondary);
-        }
-
-        .sub-category {
+        .company-name {
+            font-size: 1.1rem;
             font-weight: bold;
             color: var(--primary);
-            margin-top: 1rem;
-            margin-bottom: 0.3rem;
-            font-size: 1rem;
         }
-
-        ul.bullet-list {
-            padding-left: 1.2rem;
-            margin-top: 0.6rem;
+        .job-dates {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--text-muted);
         }
-
-        ul.bullet-list li {
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            color: var(--text-dark);
-        }
-
-        .case-study {
-            background: var(--card-bg);
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            margin-bottom: 2rem;
-            overflow: hidden;
-        }
-
-        .cs-header {
-            background: #f1f5f9;
-            padding: 1.2rem 1.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .cs-header h3 {
-            color: var(--primary);
-            font-size: 1.25rem;
-        }
-
-        .cs-header .meta {
-            font-size: 0.85rem;
-            color: var(--secondary);
-            margin-top: 0.3rem;
-        }
-
-        .cs-body {
-            padding: 1.5rem;
-        }
-
-        .tag-container {
-            display: flex;
-            gap: 0.4rem;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background: #e2e8f0;
-            color: #334155;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.78rem;
+        .job-title {
             font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 8px;
         }
-
-        details {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+            font-size: 0.98rem;
+        }
+        .skills-tagged {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 6px;
+        }
+        .case-study {
+            background: var(--bg-light);
+            padding: 16px;
             border-radius: 6px;
-            margin-bottom: 0.8rem;
-            padding: 0.8rem 1.2rem;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
         }
-
-        summary {
-            font-weight: bold;
+        .case-study h3 {
+            margin-top: 0;
             color: var(--primary);
-            cursor: pointer;
-            outline: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
-
-        .tree-list {
-            margin-top: 0.8rem;
-            padding-left: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-        }
-
-        .tree-list li {
-            margin-bottom: 0.4rem;
-        }
-
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-links { display: none; }
+        @media (max-width: 600px) {
+            .competency-grid {
+                grid-template-columns: 1fr;
+            }
+            .job-header {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
+<div class="container">
     <header>
-        <div class="nav-container">
-            <div class="logo">ANIL GHUGE</div>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#competencies">Competencies</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Case Studies</a>
-                <a href="#certifications">Certifications</a>
-            </nav>
+        <h1>Anil Ghuge</h1>
+        <div class="titles">
+            Education Specialist III | Education Specialist II | Senior Technical Education Consultant | Senior Engineer | Technical Support Engineer | Associate Consultant | Team Lead & Project Engineer
+        </div>
+        <div class="contact-info">
+            <strong>Contact:</strong> +91 9975945045 | <strong>Email:</strong> ghugeanil1@gmail.com<br>
+            <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/anil-ghuge-a6839b110" target="_blank">linkedin.com/in/anil-ghuge-a6839b110</a> | 
+            <strong>Portfolio:</strong> <a href="https://ghugeanil1.github.io/portfolio" target="_blank">ghugeanil1.github.io/portfolio</a><br>
+            <strong>Location:</strong> Pune, Maharashtra, India
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="about">
-        <div class="hero-content">
-            <h1>Anil Ghuge</h1>
-            <h2>
-                Education Specialist III <span style="opacity:0.6;">|</span> 
-                Education Specialist II <span style="opacity:0.6;">|</span> 
-                Senior Technical Education Consultant <span style="opacity:0.6;">|</span> 
-                Senior Engineer <span style="opacity:0.6;">|</span> 
-                Technical Support Engineer <span style="opacity:0.6;">|</span> 
-                Associate Consultant <span style="opacity:0.6;">|</span> 
-                Team Lead & Project Engineer
-            </h2>
-            <p>12+ years of enterprise experience across cloud data protection, technical support, infrastructure operations, and education program management.</p>
-            <div class="contact-pills">
-                <a href="mailto:ghugeanil1@gmail.com" class="pill">✉️ ghugeanil1@gmail.com</a>
-                <a href="tel:+919975945045" class="pill">📞 +91 9975945045</a>
-                <a href="https://linkedin.com/in/anil-ghuge-a6839b110" target="_blank" class="pill">🌐 LinkedIn Profile</a>
-                <span class="pill">📍 Pune, India</span>
+    <section>
+        <h2>Professional Summary</h2>
+        <p>
+            Enterprise Technology & Enablement Specialist with 12+ years of experience bridging deep infrastructure engineering and technical education. Spent 8+ years as a hands-on backup/recovery engineer administering NetBackup environments across 1,000+ servers and 10+ PB of storage, then transitioned that field-tested expertise into designing and delivering technical training, scenario-based hands-on labs, and cloud lab architecture for Veritas and Cohesity's global learner base. Combines SME-level credibility on enterprise data protection systems with modern instructional design, multimedia production, and AI-assisted content workflows, building training that reflects what practitioners actually encounter, not just theory.
+        </p>
+    </section>
+
+    <section>
+        <h2>Core Competencies</h2>
+        <div class="competency-grid">
+            <div class="competency-item">
+                <strong>💾 Enterprise Backup & Data Protection</strong>
+                NetBackup Administration (v7.1–v10.x), NetBackup Appliances (5220, 5230, 5240, 5330, Flex 5360/5260), Cohesity Data Protection Solutions, Symantec DLO, Veritas Access Appliance, Veritas Alta View, OpsCenter, Aptare Reporting, Storage Lifecycle Policies (SLP), Tape Libraries & VTLs (IBM, NetApp, EMC Data Domain)
+            </div>
+            <div class="competency-item">
+                <strong>⚙️ L3 Systems Support & Infrastructure</strong>
+                High-Severity Incident Escalation, Capacity Planning, Hardware Firmware Upgrades, Resource Performance Tuning, Database Backup & Recovery (Oracle, SQL Server, Exchange, SAP HANA, DB2-UDB, Sybase), Migration Engineering & Lifecycle Refresh, VMware/Windows/Unix/Linux Administration, NDMP & Vaulting, ITIL (Incident/Problem/Change Management)
+            </div>
+            <div class="competency-item">
+                <strong>🏗️ Virtual Cloud Lab Architecture</strong>
+                Skillable Cloud Labs (100+ published), Scenario-Based Hands-On Lab Development, Automated Scoring Scripts, Webhooks, Custom Containers, Lifecycle Actions, Cloud Slice for AWS & Azure
+            </div>
+            <div class="competency-item">
+                <strong>🎓 Technical Education & Enablement</strong>
+                Instructor-Led Training (ILT), Virtual ILT (VILT), Self-Paced E-Learning Design, Curriculum & Facilitator Guide Development, Customer & Internal Team Onboarding, Knowledge Management Systems, Assessment Development & Courseware Evaluation, Education Planning & Strategy
+            </div>
+            <div class="competency-item">
+                <strong>🎬 Multimedia & Content Authoring</strong>
+                Articulate 360 (Storyline & Rise), Camtasia Video Production, Vyond Animation, Demoboost Interactive Demos, Synthesia AI Video, Microsoft Speech Studio, Closed Captioning & Accessibility (WCAG)
+            </div>
+            <div class="competency-item">
+                <strong>🤖 AI & Team Leadership</strong>
+                Generative AI Workflows (Claude Code, Copilot, ChatGPT), Team Leadership & Mentorship, Shift Rostering, SLA & Audit Documentation, Cross-Functional Stakeholder Collaboration (Product, Engineering, Customer Success)
             </div>
         </div>
     </section>
 
-    <!-- CORE COMPETENCIES (ACROSS ALL ROLES) -->
-    <section class="section" id="competencies">
-        <h2 class="section-title">Core Competencies Across All Roles</h2>
-        <div class="grid-3">
-            <div class="card" style="margin-bottom:0;">
-                <h3>💾 Enterprise Backup & Data Protection</h3>
-                <p>NetBackup Administration (v7.1 to v10.x), NetBackup Appliances (5220, 5230, 5240, 5330), Cohesity Data Protection Solutions, Symantec DLO, OpsCenter, Aptare Reporting, Storage Lifecycle Policies (SLP), Tape Libraries & VTLs (IBM, NetApp, EMC Data Domain).</p>
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job-card">
+            <div class="job-header">
+                <span class="company-name">Cohesity</span>
+                <span class="job-dates">Pune, India</span>
             </div>
-            <div class="card" style="margin-bottom:0;">
-                <h3>⚙️ L3 Systems Support & Infrastructure</h3>
-                <p>High-Severity Incident Escalation, Capacity Planning, Hardware Firmware Upgrades, Resource Performance Tuning, Database Backup Recovery (Oracle, SQL, Exchange, SAP HANA, Unix, VMware, Linux), Migration Engineering & Lifecycle Refresh.</p>
+            <div class="job-title">Education Specialist III (Oct 2025 – Present) &nbsp;|&nbsp; Education Specialist II (Dec 2024 – Sep 2025)</div>
+            <ul>
+                <li>Personally designed and published 100+ hands-on labs on the Skillable platform spanning Veritas (NetBackup, NetBackup Appliances, IT Analytics, Flex Appliances, DLO, Access Appliance) and Cohesity (Data Protection Operations) product lines.</li>
+                <li>Built hands-on labs for 11 distinct enterprise product/version combinations, including Cohesity NetBackup 11.0 Administration, Veritas NetBackup 10.0 Advanced Administration, Veritas NetBackup Flex 5360/5260 Appliance Administration, Veritas NetBackup IT Analytics 11.2 Administration, and Cohesity Alta SaaS Protection Administration.</li>
+                <li>Contributed end-to-end (design document creation, content development, stakeholder review, and presentation) to instructor-led and self-paced courses hosted on Cohesity Academy — a paid, customer-facing course catalog — spanning Data Protection Operations, Platform Administration, and 8+ additional product-specific courses.</li>
+                <li>Contributed to free self-paced eCourses including Cohesity Cyber Resilience Foundations, Veritas Resiliency Platform 3.6 Administration, Veritas Alta View (Data Protection) Administration, and Cohesity Alta SaaS Protection Administration.</li>
+                <li>Produced multimedia training content across formats — PPT, Rise 360 modules, live demonstrations, simulations, and hands-on labs — using Camtasia, Articulate 360, Rise 360, Synthesia, and Demoboost.</li>
+                <li>Architected and managed cloud-based lab environments on Skillable, ensuring scalable and reliable hands-on training delivery.</li>
+                <li>Delivered technical training programs across Instructor-Led Training (ILT), Virtual ILT (VILT), and self-paced e-learning to build learner expertise in Cohesity's data protection solutions.</li>
+                <li>Partnered cross-functionally with product, engineering, and customer success teams to align training with product updates, customer feedback, and industry best practices.</li>
+                <li>Continuously evaluated and optimized training programs to improve learner engagement, retention, and performance outcomes.</li>
+            </ul>
+            <div class="skills-tagged">Skills tagged: NetBackup, Cloud Computing, Articulate Suite, Camtasia, Skillable, AI Workflows</div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-header">
+                <span class="company-name">Veritas Technologies LLC</span>
+                <span class="job-dates">Pune, India &nbsp;|&nbsp; Nov 2020 – Dec 2024 (4 yrs 2 mos)</span>
             </div>
-            <div class="card" style="margin-bottom:0;">
-                <h3>🏗️ Virtual Cloud Lab Architecture</h3>
-                <p>Skillable Cloud Labs, Scenario-Based Hands-On Lab Development, Automated Scoring Scripts, Webhooks, Custom Containers, Lifecycle Actions, Cloud Slice for AWS & Azure environments.</p>
+            <div class="job-title">Senior Technical Education Consultant</div>
+            <ul>
+                <li>Designed and developed technical training courses in multiple formats and scenario-based hands-on labs for Veritas data protection products.</li>
+                <li>Architected, maintained, and troubleshot cloud-based lab environments (Skillable) supporting hands-on training at scale.</li>
+                <li>Built training content using Camtasia, Articulate 360 (Storyline, Rise 360), and Demoboost.</li>
+            </ul>
+            <div class="skills-tagged">Skills tagged: Articulate Storyline, Articulate Suite, Camtasia, Skillable Cloud Labs</div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-header">
+                <span class="company-name">Sungard Availability Services</span>
+                <span class="job-dates">Pune, India &nbsp;|&nbsp; Apr 2018 – Oct 2020 (2 yrs 7 mos)</span>
             </div>
-            <div class="card" style="margin-bottom:0;">
-                <h3>🎓 Technical Education & Enablement</h3>
-                <p>Instructor-Led Training (ILT), Virtual ILT (VILT), Self-Paced E-Learning Design, Customer & Internal Team Onboarding, Facilitator Guides, Knowledge Management Systems, Assessment Development & Courseware Evaluation.</p>
+            <div class="job-title">Senior Engineer (L3 Technical Support)</div>
+            <ul>
+                <li>Monitored and troubleshot NetBackup infrastructure issues, including backup failures and database backup issues across Oracle, SQL, Exchange, and SAP HANA.</li>
+                <li>Managed tape library vendor relationships and resolved hardware/library issues; upgraded appliance firmware on NetBackup 5220/5230 models.</li>
+                <li>Performed capacity planning and performance tuning to optimize infrastructure resources.</li>
+                <li>Led lifecycle engineering migrations of legacy NetBackup master/media servers to Appliance architecture as part of technology refresh initiatives.</li>
+                <li>Handled escalated issues and performed restores (flat file, online SQL, MS Exchange).</li>
+                <li>Created SLPs, backup policies, storage units, and disk pools; authored internal NetBackup documentation.</li>
+                <li>Coordinated NetBackup Appliance hardware replacements and load-balancing fixes across 5230/5330/5240 models.</li>
+                <li>Utilized Ops Center and Aptare for reporting.</li>
+            </ul>
+        </div>
+
+        <div class="job-card">
+            <div class="job-header">
+                <span class="company-name">Veritas Technologies LLC</span>
+                <span class="job-dates">Pune, India &nbsp;|&nbsp; Feb 2017 – Mar 2018 (1 yr 2 mos)</span>
             </div>
-            <div class="card" style="margin-bottom:0;">
-                <h3>🎬 Multimedia & Content Authoring</h3>
-                <p>Articulate 360 (Storyline & Rise), Camtasia Video Production, Vyond Animation, Demoboost Interactive Demos, Synthesia AI Video, Microsoft Speech Studio, Closed Captioning & Accessibility (WCAG).</p>
+            <div class="job-title">Technical Support Engineer</div>
+            <ul>
+                <li>Delivered Business Critical Support to key accounts under Managed Backup Services premium support, maintaining high customer satisfaction.</li>
+                <li>Served as SME for NetBackup and NetBackup Appliance troubleshooting, remotely supporting backup failures across VMware, Windows, UNIX, Exchange, SQL, and Storage environments.</li>
+                <li>Handled technical escalations within a global support team and coordinated with data center engineers remotely.</li>
+                <li>Mentored Level-1 engineers on day-to-day operations.</li>
+                <li>Configured NetBackup environments including capacity planning; worked within Change, Problem, and Incident Management processes.</li>
+                <li>Authored technical/process documentation for knowledge management; participated in new process rollout.</li>
+            </ul>
+        </div>
+
+        <div class="job-card">
+            <div class="job-header">
+                <span class="company-name">Atos</span>
+                <span class="job-dates">Pune, India &nbsp;|&nbsp; Feb 2016 – Feb 2017 (1 yr 1 mo)</span>
             </div>
-            <div class="card" style="margin-bottom:0;">
-                <h3>🤖 AI & Team Leadership</h3>
-                <p>Generative AI Workflows (Claude Code, Copilot, ChatGPT), Team Leadership & Mentorship, Shift Rostering, Process Management (Incident, Change, Problem Management), SLA & Audit Documentation.</p>
+            <div class="job-title">Associate Consultant</div>
+            <ul>
+                <li>Configured backup solutions per customer requirements, including policies and schedules aligned to customer-defined SLAs.</li>
+                <li>Performed Master, Media, and Client server upgrades in coordination with onsite teams.</li>
+                <li>Monitored and troubleshot backup environment issues; administered Veritas NetBackup 7.5/7.6/7.7.</li>
+                <li>Logged and managed complex issue escalations with Veritas.</li>
+                <li>Generated weekly/monthly reports and maintained audit documentation.</li>
+                <li>Mentored new joiners.</li>
+            </ul>
+        </div>
+
+        <div class="job-card">
+            <div class="job-header">
+                <span class="company-name">Wipro</span>
+                <span class="job-dates">Pune, India</span>
             </div>
+            <div class="job-title">Team Lead – Offshore Backup Team (Dec 2014 – Jan 2016 &nbsp;|&nbsp; 1 yr 2 mos)</div>
+            <ul>
+                <li>Managed a team of 5, mentoring new joiners, preparing shift rosters, and running weekly/monthly team meetings.</li>
+                <li>Monitored and troubleshot backup and collaboration infrastructure using Veritas NetBackup and Symantec DLO.</li>
+                <li>Supported data protection systems administration across DB, Exchange, Unix, Windows, and Storage Filers for a business partner's Information Services Department.</li>
+                <li>Generated weekly/monthly reports and contributed to the knowledge management system.</li>
+            </ul>
+            <div class="job-title" style="margin-top: 10px;">Project Engineer (Jun 2012 – Dec 2014 &nbsp;|&nbsp; 2 yrs 7 mos)</div>
+            <ul>
+                <li><strong>Symantec NetBackup:</strong> Administered Symantec/Veritas Enterprise NetBackup (7.1–7.7.1) across Unix master servers and Unix/Linux/Windows media servers; managed devices, robots, storage units/groups, volumes, volume pools, and disk pools; configured backup policies and storage lifecycle policies; managed tape libraries (IBM), virtual tape libraries (NetApp), and disk storage (EMC Data Domain), including deduplication and background tasks; administered database backup agents for SQL, Sybase, Oracle, DB2-UDB, and Exchange; proactively monitored backups/restores/vaults; troubleshot failures and enabled logging for root-cause analysis; managed NDMP and vaulting processes; used Ops Center for alert policies and custom reporting.</li>
+                <li><strong>Desktop and Laptop Backup (DLO):</strong> Managed and restored PC backups; handled DLO services and filer disk space management; identified delinquent users and took appropriate action; managed profiles; troubleshot client backup issues; performed DLO installation and support.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- CHRONOLOGICAL PROFESSIONAL EXPERIENCE -->
-    <section class="section" id="experience">
-        <h2 class="section-title">Professional Experience</h2>
-
-        <!-- COMPANY: COHESITY -->
-        <div class="card">
-            <div class="company-heading">
-                <span>Cohesity</span>
-                <span style="font-size: 0.95rem; color: var(--secondary); font-weight: normal;">Full-time · 1 yr 8 mos | Pune District, Maharashtra, India · On-site</span>
-            </div>
-
-            <!-- Role 1 -->
-            <div style="margin-bottom: 1.8rem;">
-                <h3>Education Specialist III</h3>
-                <div class="role-dates">Oct 2025 - Present · 10 mos</div>
-                <p style="margin-bottom: 0.6rem;">I design and deliver high-impact technical training programs across multiple formats—including Instructor-Led Training (ILT), Virtual ILT (VILT), and self-paced e-learning—to empower learners with deep expertise in Cohesity’s data protection solutions.</p>
-                <ul class="bullet-list">
-                    <li>Develop immersive, scenario-driven hands-on labs that replicate real-world challenges, enabling learners to gain practical experience with Cohesity technologies.</li>
-                    <li>Architect and manage cloud-based lab environments (Skillable) to ensure seamless, scalable, and reliable hands-on training experiences.</li>
-                    <li>Create engaging and interactive content using tools like Camtasia, Articulate 360, Rise 360, Synthesia, and Demoboost to meet diverse learning styles and needs.</li>
-                    <li>Collaborate cross-functionally with product, engineering, and customer success teams to ensure training aligns with product updates, customer feedback, and industry best practices.</li>
-                    <li>Continuously evaluate and optimize training programs to boost learner engagement, retention, and performance outcomes.</li>
-                </ul>
-                <div class="skills-tag-box"><strong>Skills:</strong> NetBackup, Cloud Computing, Articulate Suite, Camtasia, Skillable, AI Workflows</div>
-            </div>
-
-            <!-- Role 2 -->
-            <div>
-                <h3>Education Specialist II</h3>
-                <div class="role-dates">Dec 2024 - Sep 2025 · 10 mos</div>
-                <ul class="bullet-list">
-                    <li>Design and develop high-quality technical training courses in multiple formats, including Instructor-Led Training (ILT), Virtual Instructor-Led Training (VILT), and e-learning modules, to support Cohesity's data protection products.</li>
-                    <li>Create scenario-based hands-on labs that simulate real-world technical challenges, enabling learners to gain practical experience with Cohesity solutions.</li>
-                    <li>Architect, maintain, and troubleshoot cloud-based lab environments (Skillable) to ensure seamless and effective hands-on training experiences.</li>
-                    <li>Utilize tools such as Camtasia, Articulate 360, Rise 360, Synthesia, and Demoboost to create engaging and interactive training content tailored to diverse learning needs.</li>
-                    <li>Collaborate with cross-functional teams to ensure training materials align with product updates, customer requirements, and industry best practices.</li>
-                    <li>Continuously evaluate and improve training programs to enhance learner engagement and knowledge retention.</li>
-                </ul>
-                <div class="skills-tag-box"><strong>Skills:</strong> Articulate Suite, Camtasia, Skillable Labs</div>
-            </div>
-        </div>
-
-        <!-- COMPANY: VERITAS CONSULTANT -->
-        <div class="card">
-            <div class="company-heading">
-                <span>Veritas Technologies LLC</span>
-                <span style="font-size: 0.95rem; color: var(--secondary); font-weight: normal;">Full-time · 4 yrs 2 mos | Pune Division, Maharashtra, India</span>
-            </div>
-            <h3>Senior Technical Education Consultant</h3>
-            <div class="role-dates">Nov 2020 - Dec 2024</div>
-            <p>Worked as a Senior Technical Education Consultant at Veritas Technologies LLC, where I designed, developed high-quality technical training courses in various formats and scenario-based hands-on labs for Veritas products. I was also responsible for architecting, maintaining, and troubleshooting cloud-based lab environments (Skillable) used for hands-on training.</p>
-            <ul class="bullet-list">
-                <li>Hands on experience with Camtasia, Articulate 360, Rise 360, Demoboost tools.</li>
-            </ul>
-            <div class="skills-tag-box"><strong>Skills:</strong> Articulate Storyline, Articulate Suite, Camtasia, Skillable Cloud Labs</div>
-        </div>
-
-        <!-- COMPANY: SUNGARD -->
-        <div class="card">
-            <div class="company-heading">
-                <span>Sungard Availability Services</span>
-                <span style="font-size: 0.95rem; color: var(--secondary); font-weight: normal;">Full-time · 2 yrs 7 mos | Pune/Pimpri-Chinchwad Area</span>
-            </div>
-            <h3>Senior Engineer (L3 Technical Support Engineer)</h3>
-            <div class="role-dates">Apr 2018 - Oct 2020</div>
-            <ul class="bullet-list">
-                <li>Monitoring and troubleshooting Various NetBackup Infrastructure issues.</li>
-                <li>Troubleshooting backup failures and other NetBackup issues.</li>
-                <li>Working with Tape Library vendors and resolving library issues.</li>
-                <li>Troubleshooting database backup failures like Oracle, SQL, Exchange, SAP HANA.</li>
-                <li>Performing Capacity Planning.</li>
-                <li>Up-gradation Activity for NetBackup new version releases.</li>
-                <li>Performance Tuning for resource optimization & enhanced performance of infrastructure.</li>
-                <li>Taking care of escalated issues.</li>
-                <li>Performing restore of flat file, online SQL restores, MS Exchange restores.</li>
-                <li>Expertise in NetBackup for SQL, VMware and Exchange.</li>
-                <li>Preparing various NetBackup documents for internal use as and when necessary.</li>
-                <li>Identify and fix load balancing issues/add hardware if necessary.</li>
-                <li>Upgrading the hardware firmware of NetBackup appliance 5220, 5230 model.</li>
-                <li>Co-ordinating NetBackup Appliance hardware replacements.</li>
-                <li>Migrating legacy NetBackup master/media servers to Appliance as a part of lifecycle engineering.</li>
-                <li>Technology refresh.</li>
-                <li>Creating SLP’s, backup policies, storage units and disk pools.</li>
-                <li>De-Commissioning /adding NetBackup media servers to the existing environment.</li>
-                <li>Expertise in NetBackup Appliances 5230, 5330 and 5240.</li>
-                <li>Expertise in Ops center and Aptare reporting tool.</li>
-            </ul>
-        </div>
-
-        <!-- COMPANY: VERITAS SUPPORT -->
-        <div class="card">
-            <div class="company-heading">
-                <span>Veritas Technologies LLC</span>
-                <span style="font-size: 0.95rem; color: var(--secondary); font-weight: normal;">1 yr 2 mos | Pune/Pimpri-Chinchwad Area</span>
-            </div>
-            <h3>Technical Support Engineer</h3>
-            <div class="role-dates">Feb 2017 - Mar 2018</div>
-            <ul class="bullet-list">
-                <li>Technical Specialists to provide Business Critical Support to key accounts under the Managed Backup Services premium support.</li>
-                <li>Maintain a high customer satisfaction rate, drive operational efficiency and improvements.</li>
-                <li>Providing support for VERITAS NetBackup & NetBackup Appliance remotely.</li>
-                <li>SME troubleshooting on backup failure.</li>
-                <li>Working with respective tech support for remediating OS / application issues.</li>
-                <li>Coordinating and working with data center engineer remotely.</li>
-                <li>Handling technical escalations within global team.</li>
-                <li>Working on backup / restore issues related to VMware, Windows, UNIX, Exchange, SQL & Storage.</li>
-                <li>Create technical and process related documents for knowledge management.</li>
-                <li>Participate in setting up new processes within the project.</li>
-                <li>Interacting with the clients for technical troubleshooting via WebEx.</li>
-                <li>Mentoring Level-1 engineers for day to day operation.</li>
-                <li>Configuration of NetBackup environment involving capacity planning.</li>
-                <li>Working on Change Management, Problem Management & Incident Management.</li>
-                <li>Performing on demand recovery for customer environment / data.</li>
-                <li>Working with customer IT team for remediating backup failure issues.</li>
-                <li>Remotely remediating the tape library & NetBackup Appliance issue w/wo vendor support.</li>
-                <li>Maintaining SLA with regards to the backup success rate.</li>
-            </ul>
-        </div>
-
-        <!-- COMPANY: ATOS -->
-        <div class="card">
-            <div class="company-heading">
-                <span>Atos</span>
-                <span style="font-size: 0.95rem; color: var(--secondary); font-weight: normal;">1 yr 1 mo | Pune/Pimpri-Chinchwad Area</span>
-            </div>
-            <h3>Associate Consultant</h3>
-            <div class="role-dates">Feb 2016 - Feb 2017</div>
-            <ul class="bullet-list">
-                <li>Working on backup configurations based on customer requirement.</li>
-                <li>Performing Master, Media, Client upgrades in co-ordination with onsite team.</li>
-                <li>Configuring backup policies, schedules as per customer requirement.</li>
-                <li>Adhering to customer defined backup SLA.</li>
-                <li>Monitor and Troubleshoot the issues in Backup environment.</li>
-                <li>Monitor, support & troubleshoot incidents reported in the environment.</li>
-                <li>Veritas NetBackup Administration [7.5, 7.6, 7.7].</li>
-                <li>Logging calls with Veritas for complex issues and assisting them with required data.</li>
-                <li>Working with multiple vendors for hardware related issues.</li>
-                <li>Generate weekly / monthly reports.</li>
-                <li>Creating and maintaining documents required for Audits.</li>
-                <li>Mentoring new joiners.</li>
-            </ul>
-        </div>
-
-        <!-- COMPANY: WIPRO -->
-        <div class="card">
-            <div class="company-heading">
-                <span>Wipro</span>
-                <span style="font-size: 0.95rem; color: var(--secondary); font-weight: normal;">3 yrs 8 mos | Pune/Pimpri-Chinchwad Area</span>
-            </div>
-
-            <!-- Role 1 -->
-            <div style="margin-bottom: 1.8rem;">
-                <h3>Team Lead - Offshore Backup Team</h3>
-                <div class="role-dates">Dec 2014 - Jan 2016 · 1 yr 2 mos</div>
-                <ul class="bullet-list">
-                    <li>Efficiently managed team of 5 people, Mentoring new joiners and team mates, Preparing shift rosters, Arranging weekly, monthly meetings.</li>
-                    <li>Monitor and Troubleshoot Backup and collaboration infrastructure.</li>
-                    <li>Veritas NetBackup and Symantec DLO Administration.</li>
-                    <li>Monitor, support & troubleshoot incidents reported in the environment.</li>
-                    <li>Generate weekly / monthly reports.</li>
-                    <li>Contribute to knowledge management system.</li>
-                    <li>Provide Support to the Information Services Department of the business partner on various modules of data protection for systems administration which includes DB, Exchange, Unix, Windows and Storage Filers.</li>
-                </ul>
-            </div>
-
-            <!-- Role 2 -->
-            <div>
-                <h3>Project Engineer</h3>
-                <div class="role-dates">Jun 2012 - Dec 2014 · 2 yrs 7 mos</div>
-
-                <div class="sub-category">Symantec Netbackup:</div>
-                <ul class="bullet-list">
-                    <li>Administration of Symantec Enterprise Netbackup 7.7.1, 7.6, 7.5, 7.1.</li>
-                    <li>Administrating Master servers (Unix), Media servers (Unix, Linux, Windows).</li>
-                    <li>Managing Devices, Robots.</li>
-                    <li>Managing Storage unit, groups.</li>
-                    <li>Managing Volumes, Volume pool, Disk pool.</li>
-                    <li>Managing Tape libraries (IBM), Virtual tape libraries (NetApp), Disk storage (EMC Data Domain).</li>
-                    <li>Creating and configuring policies.</li>
-                    <li>Managing Storage lifecycle policies.</li>
-                    <li>Managing NDMP, Vaulting.</li>
-                    <li>Managing Opscenter, creating Alert policies, pulling custom reports.</li>
-                    <li>Managing & Monitoring VTLs (NetApp), cloning, Deduplication, background tasks.</li>
-                    <li>Performing Backups & Restores, Duplication.</li>
-                    <li>Managing Database agents: SQL, Sybase, Oracle, DB2-Udb.</li>
-                    <li>Managing Exchange backups.</li>
-                    <li>Proactive monitoring & managing Backups/Restores, Vaults.</li>
-                    <li>Troubleshooting failures, issues encountered, enabling logging.</li>
-                    <li>Inserting/Ejecting tapes, performing Inventory.</li>
-                    <li>Monitoring Physical tape library, power cycle drives, raising case with vendor if required.</li>
-                    <li>Recycle Netbackup on Master, media and clients.</li>
-                    <li>Performing checkouts as and when required.</li>
-                    <li>Generating Backup/Restore status reports, organizing weekly meeting.</li>
-                </ul>
-
-                <div class="sub-category">Desktop and Laptop Backup (DLO):</div>
-                <ul class="bullet-list">
-                    <li>Managing & Restoring PC backups.</li>
-                    <li>Handling DLO services.</li>
-                    <li>Managing filer disk space.</li>
-                    <li>Finding delinquents users and taking appropriate actions.</li>
-                    <li>Managing profiles.</li>
-                    <li>Troubleshooting client issues regarding backup.</li>
-                    <li>Installation of DLO.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURED CASE STUDIES -->
-    <section class="section" id="projects">
-        <h2 class="section-title">Featured Case Studies</h2>
-
+    <section>
+        <h2>Featured Case Studies</h2>
         <div class="case-study">
-            <div class="cs-header">
-                <h3>Technical Microlearning & AI-Enhanced Production Workflow</h3>
-                <div class="meta">Focus: SaaS Software Enablement & TechSmith Camtasia</div>
-            </div>
-            <div class="cs-body">
-                <p><strong>Challenge:</strong> Reduce learner cognitive load when mastering complex software user interfaces and accelerate course production timelines without compromising technical accuracy.</p>
-                <p style="margin-top: 0.5rem;"><strong>Solution:</strong> Designed and produced a bite-sized 5-minute technical microlearning module using Camtasia. Integrated AI tools (Claude & Speech Studio) to draft scripts, create clear closed captions, and generate natural AI audio narration, reducing post-production edit time significantly.</p>
-                <div class="tag-container" style="margin-top:1rem;">
-                    <span class="tag">TechSmith Camtasia</span>
-                    <span class="tag">Generative AI (Claude)</span>
-                    <span class="tag">Microlearning</span>
-                    <span class="tag">Accessibility (WCAG)</span>
-                    <span class="tag">Synthesia</span>
-                </div>
-            </div>
+            <h3>Technical Microlearning & AI-Enhanced Production Workflow</h3>
+            <p><strong>Focus:</strong> SaaS Software Enablement & TechSmith Camtasia</p>
+            <p><strong>Challenge:</strong> Reduce learner cognitive load when mastering complex software user interfaces and accelerate course production timelines without compromising technical accuracy.</p>
+            <p><strong>Solution:</strong> Designed and produced a bite-sized 5-minute technical microlearning module using Camtasia. Integrated AI tools (Claude & Microsoft Speech Studio) to draft scripts, create clear closed captions, and generate natural AI audio narration, reducing post-production edit time significantly.</p>
+            <p><strong>Tools:</strong> TechSmith Camtasia, Generative AI (Claude), Microlearning Design, Accessibility (WCAG), Synthesia</p>
         </div>
-
         <div class="case-study">
-            <div class="cs-header">
-                <h3>Enterprise Hands-On Virtualized Cloud Lab Architecture</h3>
-                <div class="meta">Platform: Skillable Cloud Labs</div>
-            </div>
-            <div class="cs-body">
-                <p><strong>Challenge:</strong> Deliver realistic, hands-on software technical validation for thousands of global learners across complex enterprise storage and backup architectures.</p>
-                <p style="margin-top: 0.5rem;"><strong>Solution:</strong> Architected and published over 100+ virtual lab environments on Skillable, incorporating automated scoring scripts, life-cycle actions, and custom cloud containers to test practical learner competencies in real-time.</p>
-                <div class="tag-container" style="margin-top:1rem;">
-                    <span class="tag">Skillable Labs</span>
-                    <span class="tag">Cloud Infrastructure</span>
-                    <span class="tag">Performance Validation</span>
-                    <span class="tag">Automated Scoring</span>
-                </div>
-            </div>
+            <h3>Enterprise Hands-On Virtualized Cloud Lab Architecture</h3>
+            <p><strong>Platform:</strong> Skillable Cloud Labs</p>
+            <p><strong>Challenge:</strong> Deliver realistic, hands-on software technical validation for thousands of global learners across complex enterprise storage and backup architectures.</p>
+            <p><strong>Solution:</strong> Architected and published 100+ virtual lab environments on Skillable, incorporating automated scoring scripts, lifecycle actions, and custom cloud containers to test practical learner competencies in real time.</p>
+            <p><strong>Tools:</strong> Skillable Labs, Cloud Infrastructure, Performance Validation, Automated Scoring</p>
         </div>
     </section>
 
-    <!-- LICENSES & CERTIFICATIONS CATALOG -->
-    <section class="section" id="certifications">
-        <h2 class="section-title">Licenses & Certifications Catalog</h2>
-
-        <details open>
-            <summary>🎓 Instructional Design & eLearning Authoring</summary>
-            <ul class="tree-list">
-                <li><strong>The complete Instructional Designer course</strong> — Udemy / John Hinchliffe (Feb 2026)</li>
-                <li><strong>Create eLearning Courses with Articulate Storyline 360</strong> — Udemy / Jeff Batt (Feb 2026)</li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>🤖 Artificial Intelligence & Emerging Tech</summary>
-            <ul class="tree-list">
-                <li><strong>Claude Code in Action</strong> — Anthropic (May 2026)</li>
-                <li><strong>Amplify with AI</strong> — Cohesity (Mar 2026)</li>
-                <li><strong>Artificial Intelligence General Awareness</strong> — Veritas Technologies (May 2024)</li>
-                <li><strong>Introduction to Responsible AI / LLMs / GenAI</strong> — Google (Apr 2024)</li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>🌳 Skillable & Learn on Demand Systems (28 Badges / 100+ Published Labs Tree)</summary>
-            <ul class="tree-list">
-                <li><strong>Milestone Recognitions:</strong> 100 Labs Published, 75 Labs Published, 50 Labs Published, 25 Labs Published, 10 Labs Published.</li>
-                <li><strong>Specialized Developer Workshops:</strong> Collaborative Labs, Scoring Skillable Labs, Lab Activities & Outcomes, Custom Containers, Advanced Markdown, Custom Cloud Configurations, Skillable Script Library, Advanced Networking & Virtualization, Cloud Slice for AWS & Azure.</li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>💾 Data Protection & Enterprise Storage</summary>
-            <ul class="tree-list">
-                <li><strong>Mastering the Five Steps to Cyber Resiliency</strong> — Cohesity (Jan 2026)</li>
-                <li><strong>Data Protection & Platform Fast Track</strong> — Cohesity (2025)</li>
-                <li><strong>VCS Veritas NetBackup 10.x & Appliance Administrator</strong> — Veritas (Dec 2022)</li>
-            </ul>
-        </details>
+    <section>
+        <h2>Certifications</h2>
+        <p><strong>🎓 Instructional Design & eLearning Authoring</strong></p>
+        <ul>
+            <li>The Complete Instructional Designer Course, Udemy / John Hinchliffe (Feb 2026)</li>
+            <li>Create eLearning Courses with Articulate Storyline 360, Udemy / Jeff Batt (Feb 2026)</li>
+        </ul>
+        <p><strong>🤖 Artificial Intelligence & Emerging Tech</strong></p>
+        <ul>
+            <li>Claude Code in Action, Anthropic (May 2026)</li>
+            <li>Amplify with AI, Cohesity (Mar 2026)</li>
+            <li>Artificial Intelligence General Awareness, Veritas Technologies (May 2024)</li>
+            <li>Introduction to Responsible AI / Large Language Models / Generative AI, Google (Apr 2024)</li>
+        </ul>
+        <p><strong>🌳 Skillable & Learn on Demand Systems (28 Badges / 100+ Published Labs)</strong></p>
+        <ul>
+            <li>Milestone Recognitions: 100, 75, 50, 25, and 10 Labs Published</li>
+            <li>Specialized Developer Workshops: Collaborative Labs, Scoring Skillable Labs, Lab Activities & Outcomes, Custom Containers, Advanced Markdown & Instruction Features, Custom Cloud Configurations, Skillable Script Library, Advanced Networking & Virtualization, Cloud Slice for AWS & Azure, API Enhancement with Webhooks, Optimizing Labs with Lab Advisor, and additional workshops from 2021–2026</li>
+        </ul>
+        <p><strong>💾 Data Protection & Enterprise Storage</strong></p>
+        <ul>
+            <li>Mastering the Five Steps to Cyber Resiliency, Cohesity (Jan 2026)</li>
+            <li>Data Platform - Fast Track, Cohesity (Jul 2025)</li>
+            <li>Data Protection - Fast Track, Cohesity (Jun 2025)</li>
+            <li>VCS Veritas NetBackup 10.x and NetBackup Appliance 5.x Administrator, Veritas (Dec 2022)</li>
+            <li>VCS Veritas NetBackup 10.x Administrator, Veritas (Dec 2022)</li>
+            <li>Veritas NetBackup 8.0 and Appliances 3.0 Administrator, Veritas</li>
+        </ul>
+        <p><em>(Full 40+ credential list available on request/LinkedIn.)</em></p>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Anil Ghuge | Enterprise Technology & Enablement Specialist</p>
-    </footer>
+    <section>
+        <h2>Education</h2>
+        <p><strong>Master of Business Administration (MBA)</strong>, Information Technology — Savitribai Phule Pune University | 2011–2014</p>
+        <p><strong>Bachelor's Degree</strong>, Bioinformatics — Dr. Babasaheb Ambedkar Marathwada University | 2008–2011</p>
+    </section>
+
+    <section>
+        <h2>Languages</h2>
+        <p>English, Hindi, Marathi — Professional working proficiency</p>
+    </section>
+</div>
 
 </body>
 </html>
